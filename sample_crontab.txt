@@ -1,0 +1,25 @@
+# ===========================================
+# Sample crontab file for automated backups
+# ===========================================
+# This file demonstrates how to schedule the backup.sh script
+# to run at different intervals.
+#
+# To install:
+#   crontab sample_crontab.txt
+#
+# Notes:
+# - MAILTO defines where cron will send job output/errors.
+# - Adjust the paths below according to your environment.
+# ===========================================
+
+# Send cron job output to your email
+MAILTO="youremail@example.com"
+
+# Run backup every day at 2:00 AM
+0 2 * * * /home/ubuntu/backup-project/backup.sh >> /home/ubuntu/backup-project/backup.log 2>&1
+
+# (Optional) Run backup every 2 minutes for testing
+*/2 * * * * /home/ubuntu/backup-project/backup.sh >> /home/ubuntu/backup-project/backup.log 2>&1
+
+# (Optional) Run backup every Sunday at 3:30 AM
+30 3 * * 0 /home/ubuntu/backup-project/backup.sh >> /home/ubuntu/backup-project/backup.log 2>&1
