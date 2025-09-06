@@ -36,21 +36,23 @@ automating-backups/
 ## ⚙️ Setup Guide
 
 ### 1. Clone repo
+    git clone https://github.com/KavinduDr/Automating-backups.git
 ### 2. Make script executable
-chmod +x backup.sh
+    chmod +x backup.sh
 ### 3. Edit script
-BACKUP_SRC="/var/www/html"   # Or your chosen directory
-BACKUP_DEST="/home/ubuntu/backup-project/backups"
-GPG_RECIPIENT="Your Name <youremail@example.com>"
+    BACKUP_SRC="/var/www/html"   # Or your chosen directory
+    BACKUP_DEST="/home/ubuntu/backup-project/backups"
+    GPG_RECIPIENT="Your Name <youremail@example.com>"
 ### 4. Run backup manually
-./backup.sh
+    ./backup.sh
 ### 5. Automate with cron
 to install : 
+
     crontab sample_crontab.txt
 ### 6. To restore
 # Decrypt
-gpg -d backups/backup_2025-08-30_10-25-12.tar.gz.gpg > restore.tar.gz
+    gpg -d backups/backup_2025-08-30_10-25-12.tar.gz.gpg > restore.tar.gz
 
 # Extract
-tar -xzf restore.tar.gz -C /path/to/restore/
+    tar -xzf restore.tar.gz -C /path/to/restore/
 
