@@ -21,9 +21,13 @@ It’s designed as a learning + portfolio project to showcase **system administr
 
 ## 📂 Project Structure
 automating-backups/
+
 ├── backup.sh # Main backup script
+
 ├── sample_crontab.txt # Example cron schedule
+
 ├── README.md # Documentation
+
 ├── screenshots/
 
 
